@@ -1,4 +1,4 @@
-package com.familycode.myfamilyspringboot.person;
+package com.familycode.myfamilyspringboot.demo_person_rest_api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,17 +9,17 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/person")
-public class PersonController {
+public class DemoPersonController {
 
-    private final PersonService personService;
+    private final DemoPersonService demoPersonService;
 
     @Autowired
-    public PersonController(PersonService personService) {
-        this.personService = personService;
+    public DemoPersonController(DemoPersonService demoPersonService) {
+        this.demoPersonService = demoPersonService;
     }
 
     @GetMapping
-    public List<Person> getPerson(){
-        return personService.getPerson();
+    public List<DemoPerson> getPerson(){
+        return demoPersonService.getPerson();
     }
 }

@@ -1,6 +1,6 @@
 package com.familycode.myfamilyspringboot.views.contacts;
 
-import com.familycode.myfamilyspringboot.person.Person;
+import com.familycode.myfamilyspringboot.demo_person_rest_api.DemoPerson;
 import com.familycode.myfamilyspringboot.views.MainLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
@@ -21,20 +21,20 @@ public class ContactsView extends VerticalLayout {
         add(new Button("Click"));
 
         // Have some data
-        List<Person> people = Arrays.asList(
-                new Person("Nicolaus Copernicus", 1543),
-                new Person("Galileo Galilei", 1564),
-                new Person("George Washington", 1732),
-                new Person("John Adams", 1735),
-                new Person("Thomas Jefferson", 1743),
-                new Person("James Madison", 1751),
-                new Person("Johannes Kepler", 1571));
+        List<DemoPerson> people = Arrays.asList(
+                new DemoPerson("Nicolaus Copernicus", 1543),
+                new DemoPerson("Galileo Galilei", 1564),
+                new DemoPerson("George Washington", 1732),
+                new DemoPerson("John Adams", 1735),
+                new DemoPerson("Thomas Jefferson", 1743),
+                new DemoPerson("James Madison", 1751),
+                new DemoPerson("Johannes Kepler", 1571));
 
         // Create a grid bound to the list
-        Grid<Person> grid = new Grid<>();
+        Grid<DemoPerson> grid = new Grid<>();
         grid.setItems(people);
-        grid.addColumn(Person::getName).setHeader("Name");
-        grid.addColumn(Person::getYearOfBirth).setHeader("Year of birth");
+        grid.addColumn(DemoPerson::getName).setHeader("Name");
+        grid.addColumn(DemoPerson::getYearOfBirth).setHeader("Year of birth");
 
         add(grid);
 
