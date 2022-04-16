@@ -1,0 +1,4 @@
+@import url('./main-layout.css');
+@import url('./views/image-list-view.css');    html {
+      --lumo-border-radius: calc(var(--lumo-size-m) / 2);
+    }
