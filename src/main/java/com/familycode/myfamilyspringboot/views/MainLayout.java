@@ -3,6 +3,7 @@ package com.familycode.myfamilyspringboot.views;
 import com.familycode.myfamilyspringboot.views.about.AboutView;
 import com.familycode.myfamilyspringboot.views.contacts.ContactsView;
 import com.familycode.myfamilyspringboot.views.helloworld.HelloWorldView;
+import com.familycode.myfamilyspringboot.views.imagelist.ImageListView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -111,6 +112,7 @@ public class MainLayout extends AppLayout {
                 new MenuItemInfo("Hello World", "lab la-glide", HelloWorldView.class),
                 new MenuItemInfo("Contacts", "la la-file", ContactsView.class),
                 new MenuItemInfo("About", "la la-file", AboutView.class),
+                new MenuItemInfo("Image List", "la la-th-list", ImageListView.class),
         };
     }
 
